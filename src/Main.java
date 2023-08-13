@@ -4,7 +4,7 @@ public class Main {
 
         int balance = 100;
 
-        int replenishment = 1231;
+        int replenishment = 1309;
 
 //        boolean isReplenishment = true;
 //
@@ -15,7 +15,14 @@ public class Main {
 //            ruble = 0;
 //        }
 
-        int bonus = replenishment / 100;
+        int bonus;
+        if (replenishment >= 1000) {
+            bonus = replenishment / 100;
+        } else {
+            bonus = 0;
+        }
+
+//        int bonus = replenishment / 100;
         int check = replenishment + balance + bonus;
         System.out.println("Ваш баланс: " + check + " Рублей");
 
